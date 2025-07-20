@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hagar Abdulwahed Elsayed - Quality Specialist & Project Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .profile-info h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .profile-info p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            padding: 0.5rem 1rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .contact-links a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(44, 62, 80, 0.9);
+            padding: 1rem 0;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Content */
+        main {
+            padding: 4rem 0;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 2rem 0;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        /* Professional Summary */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .summary-card {
+            padding: 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .summary-card:hover {
+            transform: scale(1.05);
+        }
+
+        .summary-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            background: #e9ecef;
+            transform: translateX(10px);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 2rem;
+            width: 15px;
+            height: 15px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .timeline-item h3 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item .company {
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item .date {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        .skill-category h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            margin: 0.5rem 0;
+            padding: 0.3rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        /* Certifications Grid */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cert-card {
+            padding: 2rem;
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+
+        .cert-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .cert-card .cert-org {
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects */
+        .project-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(44, 62, 80, 0.9);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                text-align: center;
+            }
+
+            .profile-info h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .section {
+                padding: 2rem;
+                margin: 1rem 0;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline::before {
+                left: 10px;
+            }
+
+            .timeline-item::before {
+                left: -1.8rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-info">
+                    <h1>Hagar Abdulwahed Elsayed</h1>
+                    <p>Project Manager • Quality Specialist • ISO 9001 Lead Auditor</p>
+                    <div class="contact-links">
+                        <a href="tel:+966568273668">📱 +966 56827 3668</a>
+                        <a href="mailto:hager.abdulwahed@outlook.com">✉️ Email</a>
+                        <a href="http://www.linkedin.com/in/hagerabdelwaheed" target="_blank">💼 LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-links">
+                <a href="#summary">Summary</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="summary" class="section">
+                <h2>Professional Summary</h2>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <h3>🎯 Quality Management Expert</h3>
+                        <p>Experienced QMS and OH&S professional with ISO 9001 & 45001 Lead Auditor certification and proven track record in conformity assessment.</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>📚 Knowledge Sharing</h3>
+                        <p>Passionate about quality and knowledge sharing through two YouTube channels dedicated to office productivity and quality management.</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>🚀 Continuous Improvement</h3>
+                        <p>Seeking to leverage expertise to drive organizational excellence and foster a culture of learning and development.</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>🔍 Technical Excellence</h3>
+                        <p>Unique combination of technical expertise, auditing proficiency, and digital content creation skills for enhanced quality performance.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="section">
+                <h2>Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Project Executive</h3>
+                        <div class="company">Xada for Training and Consulting</div>
+                        <div class="date">May 2025 - Present (Part-time)</div>
+                        <p>Leading training and consulting projects, developing strategic solutions for client organizations, and managing project deliverables while ensuring quality standards and timely execution.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Project Manager</h3>
+                        <div class="company">Dynatrace Software License</div>
+                        <div class="date">November 2024 - January 2025</div>
+                        <p>Managed software licensing projects for Dynatrace platform, coordinating implementation processes, stakeholder communication, and ensuring compliance with licensing requirements and organizational objectives.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Project Specialist</h3>
+                        <div class="company">IAQC – Egypt (Remote)</div>
+                        <div class="date">July 2022 - Present</div>
+                        <p>Managing import & export product inspections through reviewing documents, verifying standards, coordinating testing, arranging inspections, and initiating certificate processes.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Technical Consultant</h3>
+                        <div class="company">TUV NORD Egypt</div>
+                        <div class="date">September 2020 – December 2021</div>
+                        <p>Overhauled required standards to check test reports and coordinate new testing with accredited laboratories. Chaired IKEA account and deciphered HS codes to define suitable Egyptian, European, and ISO standards.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Program Coordinator & Technical Officer</h3>
+                        <div class="company">TUV NORD Egypt</div>
+                        <div class="date">August 2019 - August 2020</div>
+                        <p>Contributed to team efforts in verifying product compliance through reviewing test reports and matching parameters to established standards. Provided operational support for final conformity assessment processes.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>International Trade Coordinator</h3>
+                        <div class="company">OCA Egypt S.A.E</div>
+                        <div class="date">February 2017 - July 2019</div>
+                        <p>Prepared all necessary documentation for certificates of inspection. Initiated inspection processes prior to shipment upon technical officer confirmation of compliance with standards.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>International Trade Coordinator</h3>
+                        <div class="company">TÜV Rhineland Egypt Ltd.</div>
+                        <div class="date">January 2016 - February 2017</div>
+                        <p>Processed import inspections: compiled documents, coordinated technical reviews, managed pre-shipment inspections, drafted certificates, and facilitated final issuance and delivery.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <h2>Areas of Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Leadership & Management</h3>
+                        <ul>
+                            <li>Project Management (PMP)</li>
+                            <li>Team Leadership</li>
+                            <li>Communication</li>
+                            <li>Risk Assessment</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Quality Management</h3>
+                        <ul>
+                            <li>ISO 9001 Lead Auditor</li>
+                            <li>ISO 45001 Lead Auditor</li>
+                            <li>Continuous Improvement</li>
+                            <li>Inspection Expertise</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Data Analysis</li>
+                            <li>Excel Advanced</li>
+                            <li>CRM Systems</li>
+                            <li>Python Programming</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Regulatory Knowledge</h3>
+                        <ul>
+                            <li>Import/Export Standards</li>
+                            <li>Conformity Assessment</li>
+                            <li>Product Compliance</li>
+                            <li>International Standards</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="certifications" class="section">
+                <h2>Certifications & Achievements</h2>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <h3>Project Management Professional (PMP)®</h3>
+                        <div class="cert-org">PMI Certified</div>
+                        <p>Demonstrated understanding of project management methodologies, tools, and techniques for increasing project success likelihood.</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <h3>ISO 45001/2018 OH&S Lead Auditor</h3>
+                        <div class="cert-org">IRCA Certified</div>
+                        <p>Expertise in occupational health and safety management systems, risk assessments, and developing effective risk management strategies.</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <h3>ISO 9001/2015 QMS Lead Auditor</h3>
+                        <div class="cert-org">IRCA Certified</div>
+                        <p>Specialized in developing and implementing quality management systems with strong focus on process improvements and compliance assessments.</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <h3>Generative AI for Project Managers</h3>
+                        <div class="cert-org">Professional Development</div>
+                        <p>Advanced training in using Generative AI tools for project planning, execution, and stakeholder management to optimize professional workflows.</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <h3>Quality Ambassador</h3>
+                        <div class="cert-org">SASO - Saudi Standards Organization</div>
+                        <p>Membership No. 231085267578 - Recognized for expertise in quality standards and commitment to excellence.</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <h3>Electrochemistry Certificate</h3>
+                        <div class="cert-org">Harvard University</div>
+                        <p>Certificate ID: 48b1d11fb83b4725a4ac267165cd2998 - Advanced understanding of electrochemical principles and applications.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <h2>Projects & Content Creation</h2>
+                
+                <div class="project-card">
+                    <h3>🎥 YouTube Channel: Office Productivity</h3>
+                    <p><strong>Channel:</strong> Hanger Bangar</p>
+                    <p>Dedicated to sharing office productivity tips, tools, and techniques to help professionals optimize their workflow and achieve better results in their daily tasks.</p>
+                    <a href="http://www.youtube.com/@hangerbangar" target="_blank" style="color: white; text-decoration: underline;">Visit Channel</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>🎥 YouTube Channel: Quality Management</h3>
+                    <p><strong>Channel:</strong> The Quality Corner</p>
+                    <p>Focused on quality management content, sharing insights on ISO standards, auditing practices, and quality improvement methodologies for quality professionals.</p>
+                    <a href="http://www.youtube.com/@TheQualityCorner-w9r" target="_blank" style="color: white; text-decoration: underline;">Visit Channel</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>🚴‍♀️ Bikeshare Data Analysis</h3>
+                    <p>Developed a Python-based analysis system for bike share programs across three major cities (Chicago, New York City, and Washington, DC). Used programming to compute comprehensive statistics and insights.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>⚽ European Soccer Database Investigation</h3>
+                    <p>Conducted comprehensive data analysis on European Soccer Database, applying statistical methods and data visualization techniques to extract meaningful insights from sports data.</p>
+                </div>
+            </section>
+
+            <section id="education" class="section">
+                <h2>Education & Training</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Bachelor of Commerce, Economics</h3>
+                        <div class="company">Al-Azhar University, Egypt</div>
+                        <div class="date">September 2011 - September 2015</div>
+                        <p>Comprehensive education in commerce and economics, providing strong foundation in business principles and analytical thinking.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Marketing Training Program</h3>
+                        <div class="company">EgyptAir Training Center</div>
+                        <div class="date">July 2015 - August 2015</div>
+                        <p>Intensive training across four departments: contract management, information technology, customer services, and marketing research, focusing on customer relationship management.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: #2c3e50; margin-bottom: 1rem;">🌍 Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Arabic</h3>
+                            <p>Native Speaker</p>
+                        </div>
+                        <div class="skill-category">
+                            <h3>English</h3>
+                            <p>Proficient</p>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Spanish</h3>
+                            <p>Beginner</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hagar Abdulwahed Elsayed. All rights reserved.</p>
+            <p>📍 Riyadh, Saudi Arabia | 📧 hager.abdulwahed@outlook.com</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Add interactive hover effects
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(15px) scale(1.02)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
